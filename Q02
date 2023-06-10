@@ -1,0 +1,61 @@
+package com.mycompany.speakerobj;
+
+public class SpeakerObj 
+{
+
+    public static void main(String[] args)
+    {
+        Politician p1=new Politician();
+        p1.speak("hi");
+        
+        Priest p2=new Priest();
+        p2.speak("good");
+        
+        Lecturer p3= new Lecturer();
+        p3.speak("stand up");
+    }
+}
+
+package com.mycompany.speakerobj;
+
+public interface Speaker 
+{
+    public void speak(String phrase);
+}
+
+package com.mycompany.speakerobj;
+
+public class Politician implements Speaker
+{
+    @Override
+    public void speak(String phrase)
+    {
+        System.out.println("Politician:"+phrase);
+    }
+}
+
+package com.mycompany.speakerobj;
+
+public class Lecturer implements Speaker
+{
+    
+    @Override
+    public void speak(String phrase)
+    {
+        System.out.println("Lecturer:"+phrase);
+    }
+    
+}
+
+package com.mycompany.speakerobj;
+
+
+public class Priest implements Speaker
+{
+    
+    @Override
+    public void speak(String phrase)
+    {
+        System.out.println("Preist:"+phrase);
+    }
+}
