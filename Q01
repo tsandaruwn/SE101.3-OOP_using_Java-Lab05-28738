@@ -1,0 +1,31 @@
+package com.mycompany.interfaceobj;
+
+public interface MyFirstInterface 
+{
+     int x=5;
+    
+    abstract void display();
+}
+
+package com.mycompany.interfaceobj;
+
+public class InterfaceImplemented implements MyFirstInterface
+{
+    public void display()
+    {
+        System.out.println("X is:"+x);
+    }
+}
+
+
+package com.mycompany.interfaceobj;
+
+public class InterfaceObj
+{
+
+    public static void main(String[] args) 
+    {
+        InterfaceImplemented i1= new InterfaceImplemented();
+        i1.display();
+    }
+}
